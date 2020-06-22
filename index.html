@@ -7,9 +7,143 @@
   </head>
   <body>
     <h1>Hello World!</h1>
+
     <hr/>
-    <div id="display-element"></div>
-    <button onclick="displayDate()">Click Me</button>
+
+    <!-- Display current date -->
+
+    <div class="date">
+      <h3>Click to show Today's Date!</h3>
+      <div id="display-element"></div>
+      <br><button onclick="displayDate()">Click Me</button>
+    </div>
+
+    <br>
+
     <hr/>
+
+    <!-- Convert a number to a string -->
+
+    <div class="numString">
+      <h3>Click to convert your number into a string!</h3>
+      <div id="display-numString"></div>
+      <br><button onclick="numberToString()">Click Me</button>
+    </div>
+
+    <br>
+
+    <hr/>
+
+    <!-- Convert a string to a number -->
+
+    <div class="stringNum">
+      <h3>Click to convert a string into a number!</h3>
+      <div id="display-stringNum"></div>
+      <br><button onclick="stringToNumber()">Click Me</button>
+    </div>
+
+    <br>
+
+    
+    <hr/>
+
+    <!-- Display of data types -->
+
+    <div class="dataTypes">
+      <br>
+
+      <h3>Display of data types</h3>
+
+      <select name="data-types-List" id="typesList" onchange="dataTypes()">
+        <option value="selection"></option>
+        <option value="Booleans can only have two values: true or false.">Boolean</option>
+        <option value="In JavaScript null is 'nothing'. It is supposed to be something that doesn't exist.">Null</option>
+        <option value="Undefined - A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.">Undefined</option>
+        <option value="A numeric value such as 16 or -16.5">Number</option>
+        <option value="NaN - is a value representing Not-A-Number. NaN values are generated when arithmetic operations result in undefined or unrepresentable values. Such values do not necessarily represent overflow conditions. A NaN also results from attempted coercion to numeric values of non-numeric values for which no primitive numeric value is available. For example, dividing zero by zero results in a NaN — but dividing other numbers by zero does not.">NaN</option>
+        <option value="String - A string (or a text string) is a series of characters. They are written with quotes. Example: x = 'John 3:16'">String</option>
+      </select><br><br>
+      <div id="display-dataTypes"></div>
+      <br><button onclick="dataTypes(typesList)">Submit</button>
+    </div>
+
+    <br>
+
+
+    <hr/>
+
+    <!-- Add two numbers together -->
+
+    <div class="addNums">
+      <h3>Click to add your two numbers together!</h3>
+      <label for="number">First Number</label><br>
+      <input type="number" name="number" id="firstNumber"><br><br>
+
+      <label for="secondNum">Second Number</label><br>
+      <input type="number" name="secondNum" id="secondNumber"><br><br>
+
+      <div id="display-addNums"></div>
+      <br><button onclick="addingNumbers()">Add the Numbers</button>
+    </div>
+
+    <br>
+
+    <hr/>
+
+    <!-- Two statements have to be true -->
+
+    <div class="trueTwo">
+      <h3>Submit to find out if both conditions are met!</h3>
+      
+      <label for="itemOne">Number must be less than 10!</label><br>
+      <input type="number" name="itemOne" id="itemOne"><br><br>
+
+      <label for="itemTwo">Number must be great than 1!</label><br>
+      <input type="number" name="itemTwo" id="itemTwo"><br><br>
+
+      <div id="display-trueTwo"></div>
+      <br><button onclick="twoTrue()">Submit</button>
+    </div>
+
+    <br>
+
+    <hr/>
+
+    <!-- Only one answer has to true -->
+
+    
+    <div class="falseOne">
+      <h3>Submit to find out if both conditions are met!</h3>
+
+      <h5>Value can only be less than 5 or equal to 10.</h5>
+      
+      <label for="inputOne">Input</label><br>
+      <input type="number" name="inputOne" id="inputOne"><br><br>
+
+      <div id="display-falseOne"></div>
+      <br><button onclick="oneFalse()">Submit</button>
+    </div>
+
+    <br>
+
+    <hr/>
+
+    <!-- Both statements have to be false -->
+
+    <div class="falseTwo">
+      <h3>Submit to find out if both conditions are met!</h3>
+
+      <h5>Make both of these statements incorrect.</h5>
+      
+      <label for="valueOne">What is 3 divided by 3?</label><br>
+      <input type="number" name="valueOne" id="valueOne"><br><br>
+
+      <label for="valueTwo">How many letters are in the word: three?</label><br>
+      <input type="number" name="valueTwo" id="valueTwo"><br><br>
+
+      <div id="display-falseTwo"></div>
+      <br><button onclick="twoFalse()">Submit</button>
+    </div>
+
   </body>
 </html>
